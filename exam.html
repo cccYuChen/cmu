@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中國醫學大學寒假轉學考試</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info {
+            margin-bottom: 20px;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .link a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007BFF;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .link a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>中國醫學大學寒假轉學考試</h1>
+    <div class="content">
+        <div class="info">
+            <p><strong>學生姓名：</strong>陳禹辰</p>
+            <p><strong>准考證號碼：</strong>2016030</p>
+            <p><strong>普生：</strong>82</p>
+            <p><strong>普化：</strong>76.3</p>
+            <p><strong>英文（選考）：</strong>65</p>
+        </div>
+        
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- preferences.html -->
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>填選志願</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f4f4f4;
+        }
+
+        .actions {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .actions button {
+            margin: 5px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .actions button:hover {
+            background-color: #0056b3;
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function moveUp(row) {
+            const prevRow = row.previousElementSibling;
+            if (prevRow) {
+                row.parentNode.insertBefore(row, prevRow);
+            }
+        }
+
+        function moveDown(row) {
+            const nextRow = row.nextElementSibling;
+            if (nextRow) {
+                row.parentNode.insertBefore(nextRow, row);
+            }
+        }
+
+        function submitPreferences() {
+            document.getElementById('success-message').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>填選志願</h1>
+    <div class="content">
+        <table id="preferences-table">
+            <thead>
+                <tr>
+                    <th>招生學系</th>
+                    <th>志願代碼</th>
+                    <th>成績採計科目</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>藥學系</td>
+                    <td>C001</td>
+                    <td>普通生物學、普通化學</td>
+                    <td>
+                        <button onclick="moveUp(this.parentNode.parentNode)">⬆</button>
+                        <button onclick="moveDown(this.parentNode.parentNode)">⬇</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>公共衛生學系</td>
+                    <td>C002</td>
+                    <td>普通生物學、普通化學</td>
+                    <td>
+                        <button onclick="moveUp(this.parentNode.parentNode)">上移</button>
+                        <button onclick="moveDown(this.parentNode.parentNode)">下移</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>護理學系</td>
+                    <td>C003</td>
+                    <td>普通生物學、英文</td>
+                    <td>
+                        <button onclick="moveUp(this.parentNode.parentNode)">上移</button>
+                        <button onclick="moveDown(this.parentNode.parentNode)">下移</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>醫學檢驗生物技術學系</td>
+                    <td>C004</td>
+                    <td>普通生物學、普通化學</td>
+                    <td>
+                        <button onclick="moveUp(this.parentNode.parentNode)">上移</button>
+                        <button onclick="moveDown(this.parentNode.parentNode)">下移</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>營養學系</td>
+                    <td>C005</td>
+                    <td>普通生物學、英文</td>
+                    <td>
+                        <button onclick="moveUp(this.parentNode.parentNode)">上移</button>
+                        <button onclick="moveDown(this.parentNode.parentNode)">下移</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>物理治療學系</td>
+                    <td>C006</td>
+                    <td>普通生物學、英文</td>
+                    <td>
+                        <button onclick="moveUp(this.parentNode.parentNode)">上移</button>
+                        <button onclick="moveDown(this.parentNode.parentNode)">下移</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>生物科技學系</td>
+                    <td>C007</td>
+                    <td>普通生物學、普通化學</td>
+                    <td>
+                        <button onclick="moveUp(this.parentNode.parentNode)">上移</button>
+                        <button onclick="moveDown(this.parentNode.parentNode)">下移</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>運動醫學系</td>
+                    <td>C008</td>
+                    <td>普通生物學、普通化學</td>
+                    <td>
+                        <button onclick="moveUp(this.parentNode.parentNode)">上移</button>
+                        <button onclick="moveDown(this.parentNode.parentNode)">下移</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>中國藥學曁中藥資源學系</td>
+                    <td>C009</td>
+                    <td>普通生物學、普通化學</td>
+                    <td>
+                        <button onclick="moveUp(this.parentNode.parentNode)">上移</button>
+                        <button onclick="moveDown(this.parentNode.parentNode)">下移</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>醫務管理學系</td>
+                    <td>C010</td>
+                    <td>普通生物學、英文</td>
+                    <td>
+                        <button onclick="moveUp(this.parentNode.parentNode)">上移</button>
+                        <button onclick="moveDown(this.parentNode.parentNode)">下移</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>職業安全與衛生學系</td>
+                    <td>C011</td>
+                    <td>普通生物學、普通化學</td>
+                    <td>
+                        <button onclick="moveUp(this.parentNode.parentNode)">上移</button>
+                        <button onclick="moveDown(this.parentNode.parentNode)">下移</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>藥用化妝品學系</td>
+                    <td>C012</td>
+                    <td>普通生物學、普通化學</td>
+                    <td>
+                        <button onclick="moveUp(this.parentNode.parentNode)">上移</button>
+                        <button onclick="moveDown(this.parentNode.parentNode)">下移</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>生物醫學影像曁放射科學學系</td>
+                    <td>C013</td>
+                    <td>普通生物學、普通化學</td>
+                    <td>
+                        <button onclick="moveUp(this.parentNode.parentNode)">上移</button>
+                        <button onclick="moveDown(this.parentNode.parentNode)">下移</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>生物醫學工程學系</td>
+                    <td>C014</td>
+                    <td>普通生物學、普通化學</td>
+                    <td>
+                        <button onclick="moveUp(this.parentNode.parentNode)">上移</button>
+                        <button onclick="moveDown(this.parentNode.parentNode)">下移</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="actions">
+            <button onclick="submitPreferences()">報名</button>
+        </div>
+        <div id="success-message" class="success-message">繳交成功！</div>
+    </div>
+</body>
+</html>
